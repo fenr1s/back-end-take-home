@@ -25,3 +25,8 @@ or
     ok      github.com/fenr1s/back-end-take-home/api/controllers    1.129s  coverage: 90.0% of statements
     ok      github.com/fenr1s/back-end-take-home/domain/services    0.578s  coverage: 82.7% of statements
 ```
+
+### hosting
+ - this project is hosted at http://167.71.171.15:8081
+ - swagger url http://167.71.171.15:8081/swagger/index.html
+ - or via http get http://167.71.171.15:8081/api/routes?origin=[YYZ]&destination=[JFK]
