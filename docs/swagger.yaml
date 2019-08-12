@@ -1,0 +1,42 @@
+basePath: '{{.BasePath}}'
+host: '{{.Host}}'
+info:
+  contact: {}
+  description: '{{.Description}}'
+  license: {}
+  title: '{{.Title}}'
+  version: '{{.Version}}'
+paths:
+  /api/routes:
+    get:
+      description: Given an origin and a destination it finds the shortest path
+      parameters:
+      - description: origin iata containing 3 character
+        in: query
+        maxLength: 3
+        minLength: 0
+        name: origin
+        type: string
+      - description: destination iata containing 3 character
+        in: query
+        maxLength: 3
+        minLength: 0
+        name: destination
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: shortest path
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Search
+swagger: "2.0"

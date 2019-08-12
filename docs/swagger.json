@@ -1,0 +1,61 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "{{.Description}}",
+        "title": "{{.Title}}",
+        "contact": {},
+        "license": {},
+        "version": "{{.Version}}"
+    },
+    "host": "{{.Host}}",
+    "basePath": "{{.BasePath}}",
+    "paths": {
+        "/api/routes": {
+            "get": {
+                "description": "Given an origin and a destination it finds the shortest path",
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Search",
+                "parameters": [
+                    {
+                        "maxLength": 3,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "origin iata containing 3 character",
+                        "name": "origin",
+                        "in": "query"
+                    },
+                    {
+                        "maxLength": 3,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "destination iata containing 3 character",
+                        "name": "destination",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "shortest path",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
