@@ -15,7 +15,7 @@ or
     go run main.go
 ```
 ### Patterns, Best Practices, Algorithm
- - This project is using SOLID concepts starting by the depency injection that on the layers
+ - This project is using SOLID concepts starting by the depency injection on the layers
  - As each layers has a dependecy on a interface not a pure implementation i can create mocks for them, giving me the possibilty to make real unit tests
  - So solve the shortest path problem i used the BFS breadth-first-search algorithm
  - controller layer and service layer have good test coverage
